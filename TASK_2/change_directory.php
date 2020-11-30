@@ -31,7 +31,7 @@ class Path
                     case "."://do nothing 
                         break;
                     case "":
-                        $current_folders = array('');
+                        $current_folders = array("");
                         break;
                     case (preg_match('/^[a-zA-Z]+$/', $folder) == true) :
                         array_push($current_folders, $folder);
