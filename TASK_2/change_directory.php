@@ -5,7 +5,8 @@ class Path
 
     function __construct($path)
     {
-        $this->current_path = (file_exists ( $path)) ? $path : die('Invalid Path');
+//        $this->current_path = (file_exists ( $path)) ? $path : die('Invalid Path');
+        $this->current_path = $path;
     }
 
     public function cd($new_path)
@@ -49,8 +50,8 @@ class Path
 
 }
 
-$path = new Path('/home/user/public_html/everli');
-echo $path->current_path;
+$path = new Path('/a/b/c/d');
+echo $path->current_path."\n";
 $path->cd('/');
 $path->cd('../x');
 $path->cd('./x');
